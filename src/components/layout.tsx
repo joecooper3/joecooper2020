@@ -1,13 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 
+import { lgdesktopQuery } from '../styles/Variables';
+
+import { GlobalStyle } from "../styles/Global";
 import Header from "./header";
 
 interface Props {
@@ -26,7 +23,8 @@ const Layout = ({ children }: Props) => {
   `);
 
   return (
-    <>
+    <Master>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -42,8 +40,13 @@ const Layout = ({ children }: Props) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </Master>
   );
 };
 
 export default Layout;
+
+const Master = styled.div`
+  display: grid;
+  grid-template-rows: 124px auto 48px;
+`;

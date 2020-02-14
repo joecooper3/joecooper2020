@@ -1,37 +1,38 @@
 import { Link } from "gatsby";
 import React from "react";
+import styled from "styled-components";
+
+import Logo from './Logo.tsx';
+
+import { blue, white } from "../styles/Variables";
 
 interface Props {
   siteTitle: string;
 }
 
 const Header = ({ siteTitle }: Props) => (
-  <header
-    style={{
-      background: `blue`,
-      marginBottom: `1.45rem`
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <Container>
+    <nav>
+      <ul>
+        <li>about</li>
+        </ul>
+    </nav>
+    <Logo />
+  </Container>
 );
 
 export default Header;
+
+const Container = styled.header`
+  color: ${blue};
+  background: ${white};
+  display: grid;
+  grid-template-columns: 1fr 235px;
+  align-items: center;
+  padding: 0 50px;
+`;
+
+const ATag = styled(Link)`
+  color: ${blue};
+  text-decoration: none;
+`;
