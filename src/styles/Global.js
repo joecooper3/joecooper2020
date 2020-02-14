@@ -1,11 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import { tan } from './Variables';
+import { blue, tan } from './Variables';
 
 export const GlobalStyle = createGlobalStyle`
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html,
 body,
@@ -161,23 +157,13 @@ button {
     -webkit-appearance: none;
 }
 
-
-@font-face {
-  font-family: 'Thein';
-  font-weight: 400;
-  src: url("../assets/fonts/Theinhardt-Regular.otf");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Thein';
-  font-weight: 700;
-  src: url("../assets/fonts/Theinhardt-Bold.otf");
-  font-style: normal;
-}
-
 body {
   font-family: 'Thein';
   background: ${tan};
+}
+
+a {
+    text-decoration: none;
+    color: ${blue};
 }
 `;

@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
-import Logo from './Logo.tsx';
+import LogoContainer from "./LogoContainer";
 
 import { blue, white } from "../styles/Variables";
 
@@ -13,11 +13,16 @@ interface Props {
 const Header = ({ siteTitle }: Props) => (
   <Container>
     <nav>
-      <ul>
-        <li>about</li>
-        </ul>
+      <NavList>
+        <Item><Link to="/about/">about</Link></Item>
+        <Item><Link to="/portfolio/">portfolio</Link></Item>
+        <Item><Link to="/contact/">contact</Link></Item>
+        <Item>résumé</Item>
+      </NavList>
     </nav>
-    <Logo />
+    <LogoContainer>
+      {siteTitle}
+    </LogoContainer>
   </Container>
 );
 
@@ -32,7 +37,13 @@ const Container = styled.header`
   padding: 0 50px;
 `;
 
-const ATag = styled(Link)`
-  color: ${blue};
-  text-decoration: none;
+const NavList = styled.ul`
+  display: flex;
+  flex-flow: row nowrap;
+`
+const Item = styled.li`
+  margin-right: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 20px;
 `;

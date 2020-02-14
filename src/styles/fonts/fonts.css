@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Thein';
+  font-weight: 300;
+  src: url("./Theinhardt-Light.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thein';
+  font-weight: 400;
+  src: url("./Theinhardt-Regular.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thein';
+  font-weight: 700;
+  src: url("./Theinhardt-Bold.otf");
+  font-style: normal;
+}
