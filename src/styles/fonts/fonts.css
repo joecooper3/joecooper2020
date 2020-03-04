@@ -14,6 +14,13 @@
 
 @font-face {
   font-family: 'Thein';
+  font-weight: 500;
+  src: url("./Theinhardt-Medium.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thein';
   font-weight: 700;
   src: url("./Theinhardt-Bold.otf");
   font-style: normal;

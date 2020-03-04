@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled, { keyframes } from "styled-components";
 
+import Button from "../components/button";
 import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
@@ -19,6 +20,8 @@ const IndexPage = () => (
           <HighlightTwo>visual designer.</HighlightTwo>
         </SecondLine>
       </IntroCopy>
+      <Button>more about Joe</Button>
+      <Button color="white" el="a">see his portfolio</Button>
     </Container>
   </Layout>
 );
