@@ -8,7 +8,7 @@ export const blue20 = "#3F6FE9";
 
 // Breakpoints
 
- const lgdesktopBreakpoint = '1440px';
+ const lgdesktopBreakpoint = '1600px';
  const smdesktopBreakpoint = '1200px';
  const tabletBreakpoint = '900px';
  const mobileBreakpoint = '600px';

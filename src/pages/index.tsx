@@ -7,7 +7,7 @@ import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
 
-import { black, blue, white } from "../styles/Variables";
+import { black, blue, white, tabletQuery } from "../styles/Variables";
 
 const IndexPage = () => (
   <Layout>
@@ -20,8 +20,10 @@ const IndexPage = () => (
           <HighlightTwo>visual designer.</HighlightTwo>
         </SecondLine>
       </IntroCopy>
-      <Button>more about Joe</Button>
-      <Button color="white" el="a">see his portfolio</Button>
+      <ButtonContainer>
+        <Button to="/about" el="Link">more about Joe</Button>
+        <Button to="/portfolio" color="white" el="Link">see his portfolio</Button>
+      </ButtonContainer>
     </Container>
   </Layout>
 );
@@ -87,4 +89,11 @@ const HighlightTwo = styled(Highlight)`
   &:before {
     animation-delay: 1s;
   }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;  
+  margin-top: 40px;
 `;
