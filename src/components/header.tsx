@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
+import Hamburger from "./hamburger";
 import LogoContainer from "./LogoContainer";
 
 import { blue, white } from "../styles/Variables";
@@ -15,6 +16,7 @@ const Header = ({ siteTitle }: Props) => (
         <LogoContainer>
       {siteTitle}
     </LogoContainer>
+    <Hamburger />
     <nav>
       <NavList>
         <Item><Link to="/about/">about</Link></Item>
